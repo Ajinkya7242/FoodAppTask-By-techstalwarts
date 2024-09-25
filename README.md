@@ -2,7 +2,7 @@
 
 This Food App is an Android application designed to help users browse food items, add them to favorites, and manage their cart efficiently. The app is built using Kotlin and follows the MVVM architecture, ensuring a clear separation of concerns.
 
-#App Demo
+# App Demo
 https://github.com/user-attachments/assets/f4d96656-2d80-40be-80c3-937188581758
 
 
