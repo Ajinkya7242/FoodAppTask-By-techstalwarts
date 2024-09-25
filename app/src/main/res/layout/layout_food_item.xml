@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_weight="2"
+    android:layout_margin="@dimen/_10sdp"
+    android:foreground="?attr/selectableItemBackground">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="@dimen/_155sdp"
+        app:cardCornerRadius="@dimen/_10sdp">
+        <ImageView
+            android:id="@+id/ivFoodImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/img_splash" />
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="@dimen/_5sdp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="Bubur Ayam Pak Yono Bubur Ayam Pak Yono Bubur Ayam Pak Yono"
+            android:textSize="@dimen/_16sdp"
+            android:fontFamily="@font/plus_jakarta_sans_bold"
+            android:textColor="@color/black"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/plus_jakarta_sans_bold"
+            android:maxLines="2"
+            android:text="Rp 10,000"
+            android:drawableLeft="@drawable/two_wheeler"
+            android:drawablePadding="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_14sdp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableLeft="@drawable/img_schedule"
+            android:drawablePadding="@dimen/_10sdp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="12 min . 1.2km"
+            android:textSize="@dimen/_14sdp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableLeft="@drawable/img_rating"
+            android:drawablePadding="@dimen/_10sdp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="4.9  400+ ratings"
+            android:textSize="@dimen/_14sdp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

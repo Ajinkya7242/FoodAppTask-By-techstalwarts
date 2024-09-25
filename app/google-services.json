@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "152093506265",
+    "project_id": "foodappdemo-efe93",
+    "storage_bucket": "foodappdemo-efe93.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:152093506265:android:a251aab56ad79380749cc8",
+        "android_client_info": {
+          "package_name": "com.example.tasktechstalwartsfoodapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaE6F_XGRdxG932g5m9GUUjibi_OwMYoY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
