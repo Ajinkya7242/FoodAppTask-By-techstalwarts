@@ -18,7 +18,9 @@ https://github.com/user-attachments/assets/f4d96656-2d80-40be-80c3-937188581758
 - [License](#license)
 
 ## Features
-
+- **User Login**: Securely log in to your account.
+- **User Registration**: Securely Register your account.
+- **Change Password**: Securely change your account password.
 - **Food List**: Browse and view a list of available food items.
 - **Favorites**: Add or remove food items from the favorites list.
 - **Cart Management**: Add food items to the cart from the details page and manage cart items.
