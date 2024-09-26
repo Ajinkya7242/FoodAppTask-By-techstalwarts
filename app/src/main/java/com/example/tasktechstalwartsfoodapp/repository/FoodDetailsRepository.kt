@@ -3,8 +3,8 @@ package com.example.tasktechstalwartsfoodapp.repository
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.foodappmvvm_retrofit.model.Meal
 import com.example.tasktechstalwartsfoodapp.UI.authentication.LoginOrRegActivity
+import com.example.tasktechstalwartsfoodapp.model.Meal
 import com.example.tasktechstalwartsfoodapp.model.MealsByCategory
 import com.example.tasktechstalwartsfoodapp.model.Result
 import com.example.tasktechstalwartsfoodapp.network.MealApiInterface

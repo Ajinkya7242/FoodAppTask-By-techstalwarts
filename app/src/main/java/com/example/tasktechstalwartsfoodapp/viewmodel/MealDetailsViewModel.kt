@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.foodappmvvm_retrofit.model.Meal
+import com.example.tasktechstalwartsfoodapp.model.Meal
 import com.example.tasktechstalwartsfoodapp.model.MealsByCategory
 import com.example.tasktechstalwartsfoodapp.model.MealsByCategoryCart
 import com.example.tasktechstalwartsfoodapp.model.Result

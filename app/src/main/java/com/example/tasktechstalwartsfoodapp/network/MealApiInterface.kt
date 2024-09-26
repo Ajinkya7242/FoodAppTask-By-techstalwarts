@@ -1,6 +1,6 @@
 package com.example.tasktechstalwartsfoodapp.network
 
-import com.example.foodappmvvm_retrofit.model.MealList
+import com.example.tasktechstalwartsfoodapp.model.MealList
 import com.example.tasktechstalwartsfoodapp.model.MealsByCategoryLists
 import retrofit2.Call
 import retrofit2.http.GET

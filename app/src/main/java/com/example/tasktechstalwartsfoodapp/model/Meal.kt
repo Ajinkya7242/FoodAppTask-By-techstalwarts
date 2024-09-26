@@ -1,4 +1,4 @@
-package com.example.foodappmvvm_retrofit.model
+package com.example.tasktechstalwartsfoodapp.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
