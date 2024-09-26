@@ -10,7 +10,7 @@ import com.example.tasktechstalwartsfoodapp.R
 
 abstract class SwipeToFavoriteCallback(context: Context) : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.RIGHT) {
 
-    private val favoriteIcon = ContextCompat.getDrawable(context, R.drawable.img_heart)!! // Heart icon
+    private val favoriteIcon = ContextCompat.getDrawable(context, R.drawable.baseline_add_shopping_cart_24)!! // Heart icon
     private val background = ColorDrawable(ContextCompat.getColor(context, R.color.green_success)) // Green background
 
     override fun onMove(recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder, target: RecyclerView.ViewHolder): Boolean {

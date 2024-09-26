@@ -12,7 +12,7 @@ import com.example.tasktechstalwartsfoodapp.R
 abstract class SwipeToHandleCallback(context: Context) : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT) {
 
     private val deleteIcon: Drawable = ContextCompat.getDrawable(context, R.drawable.baseline_delete_forever_24)!!
-    private val favoriteIcon: Drawable = ContextCompat.getDrawable(context, R.drawable.img_heart)!!
+    private val favoriteIcon: Drawable = ContextCompat.getDrawable(context, R.drawable.baseline_favorite_24)!!
     private val deleteBackground: ColorDrawable = ColorDrawable(ContextCompat.getColor(context, R.color.colorPrimary)) // Red background for delete
     private val favoriteBackground: ColorDrawable = ColorDrawable(ContextCompat.getColor(context, R.color.green_success)) // Green background for favorite
 

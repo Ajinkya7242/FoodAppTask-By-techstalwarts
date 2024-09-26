@@ -37,15 +37,30 @@ class MainActivity : AppCompatActivity() {
         binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 when (tab.position) {
-                    0 -> navController.navigate(R.id.homeFragment)
-                    1 -> navController.navigate(R.id.favoritesFragment)
-                    2 -> navController.navigate(R.id.cartFragment)
+                    0 -> {
+                        if (navController.currentDestination?.id != R.id.homeFragment) {
+                            navController.navigate(R.id.homeFragment)
+                        }
+                    }
+                    1 -> {
+                        if (navController.currentDestination?.id != R.id.favoritesFragment) {
+                            navController.navigate(R.id.favoritesFragment)
+                        }
+                    }
+                    2 -> {
+                        if (navController.currentDestination?.id != R.id.cartFragment) {
+                            navController.navigate(R.id.cartFragment)
+                        }
+                    }
                 }
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab) {}
-            override fun onTabReselected(tab: TabLayout.Tab) {}
+            override fun onTabReselected(tab: TabLayout.Tab) {
+                // Optionally handle reselection if needed
+            }
         })
+
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
