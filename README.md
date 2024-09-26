@@ -11,11 +11,6 @@ https://github.com/user-attachments/assets/f4d96656-2d80-40be-80c3-937188581758
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Testing](#testing)
-- [Code Structure](#code-structure)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 - **User Login**: Securely log in to your account.
@@ -42,4 +37,4 @@ https://github.com/user-attachments/assets/f4d96656-2d80-40be-80c3-937188581758
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/food-app.git
+   git clone https://github.com/Ajinkya7242/FoodAppTask-By-techstalwarts.git
