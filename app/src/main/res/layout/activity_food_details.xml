@@ -46,8 +46,8 @@
 
         <ImageView
             android:id="@+id/ivHeart"
-            android:layout_width="@dimen/_35sdp"
-            android:layout_height="@dimen/_35sdp"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
             app:srcCompat="@drawable/img_filledheart"
             android:layout_centerVertical="true"
             app:tint="@color/grey"
@@ -74,9 +74,11 @@
         android:layout_marginTop="@dimen/_20sdp"
         >
         <androidx.cardview.widget.CardView
+            android:id="@+id/cvmealImage"
             android:layout_width="@dimen/_150sdp"
             android:layout_height="@dimen/_150sdp"
             app:cardCornerRadius="@dimen/_80sdp"
+            android:visibility="gone"
             android:layout_gravity="center_horizontal"
             >
 

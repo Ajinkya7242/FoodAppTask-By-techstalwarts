@@ -110,13 +110,10 @@ class FoodDetailsActivity : AppCompatActivity() {
                     isCart = cartMealsList.any {
                         it.idMeal == mealsByCategory.idMeal
                     }
-                    Log.d("Check Vlaue",isCart.toString())
 
                     if (isCart) {
-                        Log.d("Check Vlaue","true")
                         binding.btnAddToCart.isEnabled=false
                     } else {
-                        Log.d("Check Vlaue","false")
                         binding.btnAddToCart.isEnabled=true
                     }
 
@@ -139,7 +136,7 @@ class FoodDetailsActivity : AppCompatActivity() {
                     binding.tvMealDetails.text = meals?.strInstructions
                     binding.tvArea.text = meals?.strArea
                     Glide.with(this).load(meals?.strMealThumb).into(binding.ivLogo)
-                    Log.d("Meals Data", meals.toString())
+                    binding.cvmealImage.isVisible=true
                 }
 
                 is Result.Error -> {

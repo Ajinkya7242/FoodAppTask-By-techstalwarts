@@ -20,6 +20,8 @@ import com.example.tasktechstalwartsfoodapp.databinding.FragmentCartBinding
 import com.example.tasktechstalwartsfoodapp.model.MealsByCategory
 import com.example.tasktechstalwartsfoodapp.model.MealsByCategoryCart
 import com.example.tasktechstalwartsfoodapp.utils.SwipeToDeleteCallback
+import com.example.tasktechstalwartsfoodapp.utils.SwipeToFavoriteCallback
+import com.example.tasktechstalwartsfoodapp.utils.SwipeToHandleCallback
 import com.example.tasktechstalwartsfoodapp.viewmodel.CartVIewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -49,9 +51,8 @@ class CartFragment : Fragment(), MealsCartAdapter.OnItemLongClickListener {
         binding.rvCart.layoutManager = LinearLayoutManager(requireContext())
         binding.rvCart.adapter = adapter
 
-        val swipeHandler = object : SwipeToDeleteCallback(requireContext()) {
-            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-                val position = viewHolder.adapterPosition
+        val swipeHandler = object : SwipeToHandleCallback(requireContext()) {
+            override fun onDeleteSwiped(position: Int) {
                 if (position >= 0 && position < cartMealsList.size) {
                     val meal = cartMealsList[position]
                     adapter.removeAt(position)
@@ -60,10 +61,20 @@ class CartFragment : Fragment(), MealsCartAdapter.OnItemLongClickListener {
                     adapter.notifyItemChanged(position)
                 }
             }
+
+            override fun onFavoriteSwiped(position: Int) {
+                if (position >= 0 && position < cartMealsList.size) {
+                    val meal = cartMealsList[position]
+                    binding.rvCart.adapter?.notifyItemChanged(position)
+                    showAlertDialog(meal, position)
+                }
+            }
         }
+
 
         val itemTouchHelper = ItemTouchHelper(swipeHandler)
         itemTouchHelper.attachToRecyclerView(binding.rvCart)
+
 
 
         lifecycleScope.launch {

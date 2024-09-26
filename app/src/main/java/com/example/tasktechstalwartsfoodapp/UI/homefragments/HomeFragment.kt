@@ -24,6 +24,7 @@ import com.example.tasktechstalwartsfoodapp.model.MealsByCategoryCart
 import com.example.tasktechstalwartsfoodapp.viewmodel.HomeFragmentViewModel
 import com.example.tasktechstalwartsfoodapp.model.Result
 import com.example.tasktechstalwartsfoodapp.utils.SwipeToDeleteCallback
+import com.example.tasktechstalwartsfoodapp.utils.SwipeToFavoriteCallback
 import com.example.tasktechstalwartsfoodapp.viewmodel.FirebaseAuthViewModel
 import com.google.firebase.auth.FirebaseAuth
 import dagger.hilt.android.AndroidEntryPoint
@@ -56,7 +57,20 @@ class HomeFragment : Fragment(),MealsListAdapter.OnItemLongClickListener {
         binding.rvMealsList.layoutManager=LinearLayoutManager(requireContext())
         adapter= MealsListAdapter(requireContext(),mealsList,this)
         binding.rvMealsList.adapter=adapter
+        val swipeHandler = object : SwipeToFavoriteCallback(requireContext()) {
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                val position = viewHolder.adapterPosition
+                if (position >= 0 && position < mealsList.size) {
+                    val meal = mealsList[position]
+                    binding.rvMealsList.adapter?.notifyItemChanged(position)
+                    showAlertDialog(meal, position)
+                }
+            }
+        }
 
+
+        val itemTouchHelper = ItemTouchHelper(swipeHandler)
+        itemTouchHelper.attachToRecyclerView(binding.rvMealsList)
 
         binding.ivLogout.setOnClickListener {
             showAlertDialogLogout()

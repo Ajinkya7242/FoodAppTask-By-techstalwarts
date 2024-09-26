@@ -29,9 +29,10 @@ class HomeFragmentViewModel @Inject constructor(private val repo:MealListReposit
             }
         }
     }
+
     suspend fun fetchPopularItems() {
         repo.getPopularItems().observeForever { result ->
-            _popularItemsLiveData.value = result
+            _popularItemsLiveData.postValue(result)
         }
     }
 
